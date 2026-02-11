@@ -31,7 +31,7 @@ public class Temperatures {
 			
 
 			System.out.println("Please enter a day of the week for temp on one day or enter 'week' for full week temps with average: ");
-			weekDay = scnr.nextLine();			
+			weekDay = scnr.nextLine();	
 			
 			if (weekDay.equalsIgnoreCase("week")) {
 				
