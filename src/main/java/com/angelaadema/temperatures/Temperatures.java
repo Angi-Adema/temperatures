@@ -4,54 +4,12 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Temperatures {
-	public static void main(String[] args) {
-		
-		// Pseudocode
-		
-		// START
-		//		CREATE Scanner object FOR to read user input
-		
-		//		DECLARATIONS
-		//			String weekDay;
-		//			int average;
-		//			int sum;
-		//			int index;
-		
-		//		SET average = 0
-		//		SET sum = 0
-		
-		//		CREATE ArrayList day
-		//			SET day = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-		
-		//		CREATE ArrayList dailyTemp
-		//			SET dailyTemp = [65, 52, 53, 47, 47, 55, 63]
-		
-		//		PRINT "Please enter a day of the week for temp on one day or enter 'week' for full week temps with average: "	
-		//		READ weekDay
-		
-		//		IF weekDay.equalsIgnoreCase("week")
-		//			FOR i = 0; i < day.size(); i++
-		//				PRINT day.get(i): dailyTemp.get(i)
-		//				ADD dailyTemp to sum
-		//			ENDFOR
-		
-		//			SET average = sum / dailyTemp.size()
-		//		ELSE
-		//			SET index to day.indexOf(weekDay)
-		
-		//			IF index != -1
-		//				PRINT "Your selected day is: " + weekDay + " and the temperature is expected to be: " + dailyTemp.get(index)
-		//			ELSE
-		//				PRINT "Please enter a valid day."
-		//			ENDIF
-		//		ENDIF
-		// END
-		
+	public static void main(String[] args) {		
 		
 		Scanner scnr = new Scanner(System.in);
 		
 		String weekDay;
-		int average = 0;
+		int average;
 		int sum = 0;
 		int index;
 		
@@ -98,3 +56,48 @@ public class Temperatures {
 			}
 	}
 }
+
+
+
+
+// Pseudocode
+
+// START
+//		CREATE Scanner object FOR read user input
+
+//		DECLARATIONS
+//			weekDay as String
+//			average as int
+//			sum as int
+//			index as int
+
+//		SET sum = 0
+
+//		CREATE ArrayList day
+//			SET day = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+
+//		CREATE ArrayList dailyTemp
+//			SET dailyTemp = [65, 52, 53, 47, 47, 55, 63]
+
+//		PRINT "Please enter a day of the week for temp on one day or enter 'week' for full week temps with average: "	
+//		READ weekDay
+
+//		IF weekDay equalsIgnoreCase "week" THEN
+//			FOR i from 0 to day.size - 1
+//				PRINT day[i] + ": " + dailyTemp[i]
+//				SET sum = sum + dailyTemp[i]
+//			ENDFOR
+
+//			SET average = sum / dailyTemp.size
+//			PRINT "The week's average temp is: " + average
+
+//		ELSE
+//			SET index = day.indexOf(weekDay)
+
+//			IF index != -1 THEN
+//				PRINT "Your selected day is: " + weekDay + " and the temperature is expected to be: " + dailyTemp[index]
+//			ELSE
+//				PRINT "Please enter a valid day."
+//			ENDIF
+//		ENDIF
+// END
