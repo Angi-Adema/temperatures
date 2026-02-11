@@ -33,7 +33,18 @@ public class Temperatures {
 			
 			//System.out.println(avgTemp.toString());
 
+			System.out.println("Please enter a day of the week for temp on one day or enter 'week' for full week temps with average: ");
+			weekDay = scnr.nextLine();
 		
+			int index = day.indexOf(weekDay);
+			System.out.println("Your selected day is: " + weekDay + " and the temperature is expected to be: " + avgTemp.get(index));
+		
+			for (int i = 0; i < avgTemp.size(); i++) {
+				sum += avgTemp.get(i);
+			}
+		
+			average = sum / 7;
+
 		
 	}
 }
