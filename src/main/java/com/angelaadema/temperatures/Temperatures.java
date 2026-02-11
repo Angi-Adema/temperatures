@@ -20,31 +20,37 @@ public class Temperatures {
 			day.add("Saturday");
 			day.add("Sunday");
 			
-			//System.out.println(day.toString());
+		ArrayList<Integer> dailyTemp = new ArrayList<>();
+			dailyTemp.add(65);
+			dailyTemp.add(52);
+			dailyTemp.add(53);
+			dailyTemp.add(47);
+			dailyTemp.add(47);
+			dailyTemp.add(55);
+			dailyTemp.add(63);
 			
-		ArrayList<Integer> avgTemp = new ArrayList<>();
-			avgTemp.add(65);
-			avgTemp.add(52);
-			avgTemp.add(53);
-			avgTemp.add(47);
-			avgTemp.add(47);
-			avgTemp.add(55);
-			avgTemp.add(63);
-			
-			//System.out.println(avgTemp.toString());
 
 			System.out.println("Please enter a day of the week for temp on one day or enter 'week' for full week temps with average: ");
-			weekDay = scnr.nextLine();
-		
-			int index = day.indexOf(weekDay);
-			System.out.println("Your selected day is: " + weekDay + " and the temperature is expected to be: " + avgTemp.get(index));
-		
-			for (int i = 0; i < avgTemp.size(); i++) {
-				sum += avgTemp.get(i);
+			weekDay = scnr.nextLine();			
+			
+			if (weekDay.equalsIgnoreCase("week")) {
+				
+				for (int i = 0; i < day.size(); i++) {
+					System.out.println(day.get(i) + ": " + dailyTemp.get(i));
+					sum += dailyTemp.get(i);
+				}
+				
+				average = sum / dailyTemp.size();
+				System.out.println("The week's average temp is: " + average);
+				
+			} else {
+				int index = day.indexOf(weekDay);
+				
+				if (index != -1) {
+					System.out.println("Your selected day is: " + weekDay + " and the temperature is expected to be: " + dailyTemp.get(index));
+				} else {
+					System.out.println("Please enter a valid day.");
+				}
 			}
-		
-			average = sum / 7;
-
-		
 	}
 }
