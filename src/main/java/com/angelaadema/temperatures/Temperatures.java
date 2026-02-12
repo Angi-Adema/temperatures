@@ -73,25 +73,32 @@ public class Temperatures {
 // Pseudocode
 
 // START
+        // Scanner object for user input
 //		CREATE Scanner object FOR read user input
 
+		// Declare variables
 //		DECLARATIONS
 //			weekDay as String
 //			average as int
 //			sum as int
 //			index as int
 
+		// Initialize variable requiring it ahead of time
 //		SET sum = 0
 
+		// Write both ArrayLists for days of the week and temperatures for each day
 //		CREATE ArrayList day
 //			SET day = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
 //		CREATE ArrayList dailyTemp
 //			SET dailyTemp = [65, 52, 53, 47, 47, 55, 63]
 
+		// Prompt the user to enter either a week day or "week" for the full week plus average temp for the week then read user input
 //		PRINT "Please enter a day of the week for temp on one day or enter 'week' for full week temps with average: "	
 //		READ weekDay
 
+		// If statement to loop through the days of the week returning each day along with the corresponding 
+        // temperature then summing temps and calculate average
 //		IF weekDay equalsIgnoreCase "week" THEN
 //			FOR i from 0 to day.size - 1
 //				PRINT day[i] + ": " + dailyTemp[i]
@@ -101,6 +108,7 @@ public class Temperatures {
 //			SET average = sum / dailyTemp.size
 //			PRINT "The week's average temp is: " + average
 
+		// Look for specific index of entered day and return day and corresponding temp or prompt to try again
 //		ELSE
 //			SET index = day.indexOf(weekDay)
 
