@@ -108,7 +108,7 @@ public class Temperatures {
 //			SET average = sum / dailyTemp.size
 //			PRINT "The week's average temp is: " + average
 
-		// Look for specific index of entered day and return day and corresponding temp or prompt to try again
+		
 //		ELSE
 //			SET index = day.indexOf(weekDay)
 
